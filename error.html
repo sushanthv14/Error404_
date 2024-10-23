@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Startup Idea Marketplace</title>
+  <style>
+    /* General styling */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Poppins', sans-serif;
+    }
+
+    body {
+      background-color: #f5f5f5;
+      color: #333;
+    }
+
+    h1, h2, h3, p {
+      margin-bottom: 15px;
+    }
+
+    /* Header with gradient background */
+    header {
+      background: linear-gradient(135deg, #1E90FF, #FF4500);
+      padding: 60px 20px;
+      text-align: center;
+      color: white;
+    }
+
+    header h1 {
+      font-size: 48px;
+      font-weight: bold;
+    }
+
+    header p {
+      font-size: 20px;
+      margin-bottom: 30px;
+    }
+
+    header .btn {
+      background-color: #39FF14;
+      color: #fff;
+      padding: 15px 30px;
+      border-radius: 30px;
+      font-size: 18px;
+      text-transform: uppercase;
+      transition: background-color 0.3s ease-in-out, transform 0.3s;
+      display: inline-block;
+      text-decoration: none;
+    }
+
+    header .btn:hover {
+      background-color: #8A2BE2;
+      transform: scale(1.1);
+    }
+
+    /* Marketplace Section */
+    .marketplace {
+      padding: 50px 20px;
+      text-align: center;
+    }
+
+    .marketplace h2 {
+      font-size: 36px;
+      color: #FF4500;
+    }
+
+    /* Idea Cards */
+    .idea-cards {
+      display: flex;
+      justify-content: space-around;
+      flex-wrap: wrap;
+      margin-top: 30px;
+    }
+
+    .idea-card {
+      background-color: white;
+      border-radius: 15px;
+      box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+      transition: transform 0.3s, box-shadow 0.3s;
+      padding: 20px;
+      margin: 20px;
+      width: 300px;
+      overflow: hidden;
+    }
+
+    .idea-card:hover {
+      transform: translateY(-10px);
+      box-shadow: 0 12px 24px rgba(0, 0, 0, 0.2);
+    }
+
+    .idea-card .idea-header {
+      background-color: #1E90FF;
+      color: white;
+      padding: 20px;
+      border-radius: 15px 15px 0 0;
+      text-align: center;
+    }
+
+    .idea-card .idea-header h3 {
+      font-size: 24px;
+    }
+
+    .idea-card .idea-body {
+      padding: 20px;
+      color: #333;
+      text-align: center;
+    }
+
+    .idea-card .idea-body .price {
+      font-size: 20px;
+      color: #FF4500;
+      margin-top: 10px;
+    }
+
+    .idea-card .btn {
+      background-color: #39FF14;
+      color: white;
+      padding: 10px 20px;
+      border-radius: 25px;
+      text-transform: uppercase;
+      display: inline-block;
+      margin-top: 10px;
+      transition: background-color 0.3s ease-in-out, transform 0.3s;
+      text-decoration: none;
+    }
+
+    .idea-card .btn:hover {
+      background-color: #8A2BE2;
+      transform: scale(1.1);
+    }
+
+    /* Floating Button */
+    .floating-btn {
+      position: fixed;
+      bottom: 30px;
+      right: 30px;
+      background-color: #FF4500;
+      color: white;
+      font-size: 24px;
+      padding: 20px;
+      border-radius: 50%;
+      text-align: center;
+      box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+      transition: background-color 0.3s ease-in-out, transform 0.3s;
+      text-decoration: none;
+    }
+
+    .floating-btn:hover {
+      background-color: #1E90FF;
+      transform: scale(1.1);
+    }
+
+    /* Responsive Design */
+    @media (max-width: 768px) {
+      .idea-cards {
+        flex-direction: column;
+        align-items: center;
+      }
+
+      header h1 {
+        font-size: 32px;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Header Section -->
+  <header>
+    <h1>Startup Idea Marketplace</h1>
+    <p>Discover groundbreaking ideas, buy and patent them!</p>
+    <a href="#marketplace" class="btn">Browse Ideas</a>
+    <a href="/sell" class="btn">Sell Your Idea</a>
+  </header>
+
+  <!-- Marketplace Section -->
+  <section class="marketplace" id="marketplace">
+    <h2>Top Startup Ideas</h2>
+
+    <div class="idea-cards">
+      <!-- Idea Card 1 -->
+      <div class="idea-card">
+        <div class="idea-header">
+          <h3>Smart Greenhouse</h3>
+        </div>
+        <div class="idea-body">
+          <p>An automated system to manage crop growth using AI and IoT.</p>
+          <p class="price">$12,000</p>
+        </div>
+        <a href="/idea/1" class="btn">View Details</a>
+      </div>
+
+      <!-- Idea Card 2 -->
+      <div class="idea-card">
+        <div class="idea-header">
+          <h3>AI Tutor Platform</h3>
+        </div>
+        <div class="idea-body">
+          <p>An intelligent tutoring system that adapts to student learning styles.</p>
+          <p class="price">$15,000</p>
+        </div>
+        <a href="/idea/2" class="btn">View Details</a>
+      </div>
+
+      <!-- Idea Card 3 -->
+      <div class="idea-card">
+        <div class="idea-header">
+          <h3>Health Monitor App</h3>
+        </div>
+        <div class="idea-body">
+          <p>An app that tracks vitals and provides health insights using AI.</p>
+          <p class="price">$10,000</p>
+        </div>
+        <a href="/idea/3" class="btn">View Details</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Floating Action Button -->
+  <a href="/sell" class="floating-btn">+</a>
+<header>
+    <h1>Startup Idea Marketplace</h1>
+    <p>Buy innovative startup ideas or sell yours, and patent it after purchase!</p>
+    <a href="/browse" class="btn">Browse Ideas</a>
+    <a href="/sell" class="btn">Sell Your Idea</a>
+    <a href="/signup" class="btn">Sign Up</a>
+  </header>
+  <div class="idea-card">
+    <h2>Revolutionary AI Platform</h2>
+    <p>Category: Tech</p>
+    <p>Price: $10,000</p>
+    <a href="/idea/1" class="btn">View Details</a>
+  </div>
+  <div class="idea-details">
+    <h1>Revolutionary AI Platform</h1>
+    <p>This AI platform can automate complex tasks and improve efficiency...</p>
+    <p>Price: $10,000</p>
+    <button onclick="buyNow()">Buy Now</button>
+  </div>
+  <form method="POST" action="/sell">
+    <label for="title">Title</label>
+    <input type="text" id="title" name="title" required>
+    <label for="description">Description</label>
+    <textarea id="description" name="description" required></textarea>
+  
+    <label for="category">Category</label>
+    <input type="text" id="category" name="category" required>
+  
+    <label for="price">Price</label>
+    <input type="number" id="price" name="price" required>
+  
+    <button type="submit">Submit Idea</button>
+  </form>
+</body>
+</html>     
